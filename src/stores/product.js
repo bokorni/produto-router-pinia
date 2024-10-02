@@ -9,7 +9,16 @@ export const useproductsStore = defineStore('products', () => {
     {id: 4, name: 'Bolo de cenoura', price: 3.0, qty: 70},
     {id: 5, name: 'Brownie', price: 6.4, qty: 10}
   ])
+  function getProductById(id){
+   // for (let product of products.value){
+     // if(product.id === id) {
+    //    return product
+   //   }
+  //  }
+    //return{}
+    return products.value.find((product) => product.id)
+  }
  
-
-  return { products }
+return { products, getProductById}
 })
+  
